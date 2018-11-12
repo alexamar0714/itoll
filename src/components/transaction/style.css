@@ -1,0 +1,29 @@
+.transaction {
+	padding-top: 15%;
+	min-height: 100%;
+ 	width: 100%;
+}
+
+ul {
+	list-style-type: none;
+	text-align: left;
+}
+
+li {
+	padding-bottom: 15px;
+}
+.transactionTitle {
+    text-align: center;
+    padding-bottom: 5%;
+    font-weight: bold;
+
+}
+.productsTitle {
+    text-align: center;
+    padding-bottom: 5%;
+    font-weight: bold;
+}
+
+.productName {
+    font-weight: bold;
+}

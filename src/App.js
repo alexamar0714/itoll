@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Home from './components/home/index.js';
+import Scanner from './components/scanner/index.js';
+import Transaction from './components/transaction/index.js';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Header from './header/index.js';
+
 
 class App extends Component {
-  render() {
+  
+    handleRouter = e => {
+	    this.currentUrl = e.url;
+    }
+
+    render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <BrowserRouter onChange={this.handleRoute}>
+      <div>
+      <Header />
+	    <Route path='/itoll' exact component={Home}/>
+	    <Route path='/itoll/scanner' exact component={Scanner}/>
+	    <Route path='/itoll/transaction' exact component={Transaction} />
+      </div>
+      </BrowserRouter>
       </div>
     );
   }
